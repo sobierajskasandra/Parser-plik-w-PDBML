@@ -1,3 +1,4 @@
+# coding: utf8
 class PDBMLResidue:
     def __init__(self, namespace, residue, atoms):
         self.residue = residue
@@ -38,3 +39,11 @@ class PDBMLResidue:
                 return True
 
         return False
+
+    def print_data(self):
+        print("Residue: " + self.get_resname())
+        print("Details: " + self.get_details())
+        print("Seq ID: " + self.get_segid())
+        print("Has 'P' atom: " + str(self.has_id('P')))
+        print("Has 'NOPE' atom: " + str(self.has_id('NOPE')))
+        print("----")

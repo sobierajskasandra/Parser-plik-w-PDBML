@@ -1,0 +1,6 @@
+Structure: 4XPV
+Atoms count: 0
+Residues count: 0
+
+
+

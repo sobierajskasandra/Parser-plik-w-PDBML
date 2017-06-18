@@ -1,0 +1,76 @@
+Protein: 1EHZ
+Atoms count: 1821
+Residues count: 14
+
+
+
+Atom ID: OP3
+Full name: OP3
+Coordinates (X,Y,Z array): [50.193, 51.19, 50.534]
+Vector (normalized): 87.71224831800859
+B Factor: 99.85
+Occupancy: 1.0
+Alt Loc: None
+----
+Atom ID: P
+Full name: P
+Coordinates (X,Y,Z array): [50.626, 49.73, 50.573]
+Vector (normalized): 87.14179883959247
+B Factor: 100.19
+Occupancy: 1.0
+Alt Loc: None
+----
+Atom ID: OP1
+Full name: OP1
+Coordinates (X,Y,Z array): [49.854, 48.893, 49.562]
+Vector (normalized): 85.62907572197659
+B Factor: 100.19
+Occupancy: 1.0
+Alt Loc: None
+----
+Atom ID: OP2
+Full name: OP2
+Coordinates (X,Y,Z array): [52.137, 49.542, 50.511]
+Vector (normalized): 87.88650439060595
+B Factor: 99.21
+Occupancy: 1.0
+Alt Loc: None
+----
+Atom ID: O5'
+Full name: O5'
+Coordinates (X,Y,Z array): [50.161, 49.136, 52.023]
+Vector (normalized): 87.38915805750734
+B Factor: 99.82
+Occupancy: 1.0
+Alt Loc: None
+----
+Residue: 2MG
+Details: 2N-METHYLGUANOSINE-5'-MONOPHOSPHATE
+Seq ID: 10
+Has 'P' atom: True
+Has 'NOPE' atom: False
+----
+Residue: H2U
+Details: 5,6-DIHYDROURIDINE-5'-MONOPHOSPHATE
+Seq ID: 16
+Has 'P' atom: True
+Has 'NOPE' atom: False
+----
+Residue: H2U
+Details: 5,6-DIHYDROURIDINE-5'-MONOPHOSPHATE
+Seq ID: 17
+Has 'P' atom: True
+Has 'NOPE' atom: False
+----
+Residue: M2G
+Details: N2-DIMETHYLGUANOSINE-5'-MONOPHOSPHATE
+Seq ID: 26
+Has 'P' atom: True
+Has 'NOPE' atom: False
+----
+Residue: OMC
+Details: O2'-METHYLYCYTIDINE-5'-MONOPHOSPHATE
+Seq ID: 32
+Has 'P' atom: True
+Has 'NOPE' atom: False
+----
