@@ -13,7 +13,7 @@ import sys
 from classes.logger import PDBMLLogger
 from classes.parser import PDBMLParser
 
-file_path = input("Sciezka do pliku (np. xml/test.xml): ")
+file_path = input("Path to the file (e.g. xml/test.xml): ")
 print('\n\n')
 
 # Parser start and creation of the output file
