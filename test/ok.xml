@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PDBx:datablock datablockName="1EHZ"
+   xmlns:PDBx="http://pdbml.pdb.org/schema/pdbx-v40.xsd"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://pdbml.pdb.org/schema/pdbx-v40.xsd pdbx-v40.xsd">
+
+  <PDBx:atom_siteCategory>
+    <PDBx:atom_site id="1">
+       <PDBx:B_iso_or_equiv>99.85</PDBx:B_iso_or_equiv>
+       <PDBx:Cartn_x>50.193</PDBx:Cartn_x>
+       <PDBx:Cartn_y>51.190</PDBx:Cartn_y>
+       <PDBx:Cartn_z>50.534</PDBx:Cartn_z>
+       <PDBx:auth_asym_id>A</PDBx:auth_asym_id>
+       <PDBx:auth_atom_id>OP3</PDBx:auth_atom_id>
+       <PDBx:auth_comp_id>G</PDBx:auth_comp_id>
+       <PDBx:auth_seq_id>1</PDBx:auth_seq_id>
+       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+       <PDBx:label_alt_id xsi:nil="true" />
+       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+       <PDBx:label_atom_id>OP3</PDBx:label_atom_id>
+       <PDBx:label_comp_id>G</PDBx:label_comp_id>
+       <PDBx:label_entity_id>1</PDBx:label_entity_id>
+       <PDBx:label_seq_id>1</PDBx:label_seq_id>
+       <PDBx:occupancy>1.00</PDBx:occupancy>
+       <PDBx:pdbx_PDB_model_num>1</PDBx:pdbx_PDB_model_num>
+       <PDBx:type_symbol>O</PDBx:type_symbol>
+    </PDBx:atom_site>
+  </PDBx:atom_siteCategory>
+
+  <PDBx:pdbx_struct_mod_residueCategory>
+     <PDBx:pdbx_struct_mod_residue id="1">
+        <PDBx:auth_asym_id>A</PDBx:auth_asym_id>
+        <PDBx:auth_comp_id>2MG</PDBx:auth_comp_id>
+        <PDBx:auth_seq_id>10</PDBx:auth_seq_id>
+        <PDBx:details>2N-METHYLGUANOSINE-5&apos;-MONOPHOSPHATE</PDBx:details>
+        <PDBx:label_asym_id>A</PDBx:label_asym_id>
+        <PDBx:label_comp_id>2MG</PDBx:label_comp_id>
+        <PDBx:label_seq_id>10</PDBx:label_seq_id>
+        <PDBx:parent_comp_id>G</PDBx:parent_comp_id>
+     </PDBx:pdbx_struct_mod_residue>
+  </PDBx:pdbx_struct_mod_residueCategory>
+  <PDBx:symmetryCategory>
+     <PDBx:symmetry entry_id="1EHZ">
+        <PDBx:cell_setting>monoclinic</PDBx:cell_setting>
+        <PDBx:space_group_name_H-M>P 1 21 1</PDBx:space_group_name_H-M>
+     </PDBx:symmetry>
+  </PDBx:symmetryCategory>
+</PDBx:datablock>

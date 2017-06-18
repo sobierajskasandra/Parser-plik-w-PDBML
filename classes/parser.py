@@ -13,7 +13,6 @@ class PDBMLParser:
 
     def __init__(self, file_path):
         self.file_path = file_path
-        self.ns = "{http://pdbml.pdb.org/schema/pdbx-v40.xsd}"
 
     def load(self):
         xml_file = Path(self.file_path)
@@ -28,6 +27,9 @@ class PDBMLParser:
         try:
             tree = etree.parse(self.file_path)
             self.results = tree.getroot()
+            self.remove_namespace(self.results, u'http://pdbml.pdb.org/schema/pdbx-v40.xsd')
+            self.remove_namespace(self.results, u'http://pdbml.pdb.org/schema/pdbx-v42.xsd')
+            self.remove_namespace(self.results, u'http://pdbml.pdb.org/schema/pdbx-v50.xsd')
         except:
             print("Invalid XML format file")
             exit()
@@ -37,18 +39,26 @@ class PDBMLParser:
 
     def parse_atoms(self):
         for section in self.results:
-            if section.tag == self.ns + "atom_siteCategory":
-                for obj in section:
-                    atom = PDBMLAtom(self.ns, obj)
-                    self.atoms.append(atom)
+            if section.tag != "atom_siteCategory": continue
+
+            for obj in section:
+                atom = PDBMLAtom(obj)
+                self.atoms.append(atom)
 
     def parse_residues(self):
-        for section in self.results:
-            if section.tag == self.ns + "pdbx_struct_mod_residueCategory":
-                for obj in section:
-                    residue = PDBMLResidue(self.ns, obj, self.atoms)
-                    self.residues.append(residue)
+        # The list of parameters and searching
+        attrs = self.residues_attributes()
 
+        for section in self.results:
+            if section.tag not in attrs: continue
+
+            for obj in section:
+                if obj.tag not in attrs: continue
+
+                residue = PDBMLResidue(obj, self.atoms)
+                self.residues.append(residue)
+
+    # Statics and name of structure
     def get_name(self):
         if 'datablockName' in self.results.attrib:
             return self.results.attrib['datablockName']
@@ -62,6 +72,22 @@ class PDBMLParser:
         return str(len(self.residues))
 
     def print_file_info(self):
-        print("Structure: " + self.get_name())
+        print("Protein: " + self.get_name())
         print("Atoms count: " + self.atoms_length())
         print("Residues count: " + self.residues_length())
+
+    # Helper
+    def remove_namespace(self, doc, namespace):
+        ns = u'{%s}' % namespace
+        nsl = len(ns)
+        for elem in doc.getiterator():
+            if elem.tag.startswith(ns):
+                elem.tag = elem.tag[nsl:]
+
+    def residues_attributes(self):
+        return [
+            'pdbx_struct_mod_residueCategory',
+            'pdbx_struct_mod_residue',
+            'struct_site_genCategory',
+            'struct_site_gen'
+        ]
